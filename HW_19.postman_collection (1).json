@@ -15,22 +15,14 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(200);\r",1333333333333333333333333
 							"});"
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"email\": \"morannon21@gmail.com\",\r\n  \"password\": \"hilleL1!\",\r\n  \"remember\": false\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+
 						}
 					}
 				},
@@ -39,7 +31,7 @@
 					"protocol": "https",
 					"host": [
 						"{{my_url}}"
-					],
+					],qweeeeeeeeeeeeeeeeee
 					"path": [
 						"auth",
 						"signin"
@@ -49,19 +41,7 @@
 			"response": []
 		},
 		{
-			"name": "Add car Ford Fusion",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var jsonData = pm.response.json();\r",
-							"pm.collectionVariables.set(\"car_id\", jsonData.data.id);\r",
-							"\r",
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
-							"});\r",
-							"\r",
+
 							"pm.test(\"Check data in response body\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.data.carBrandId).to.eql(3);\r",
